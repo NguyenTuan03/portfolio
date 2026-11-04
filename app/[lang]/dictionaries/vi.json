@@ -18,12 +18,17 @@
   },
   "hero": {
     "command": "whoami",
-    "greeting": "Xin chào, mình là",
+    "greeting": "Xin chào! Mình là",
     "role": "Lập trình viên Full-stack",
     "tagline": "Biến ý tưởng thành sản phẩm chạy được, từ database đến giao diện.",
     "ctaProjects": "Xem dự án",
     "ctaGithub": "GitHub",
-    "avatarAlt": "Chân dung Nguyễn Tuấn"
+    "avatarAlt": "Chân dung Nguyễn Tuấn",
+    "rolePrefix": "Mình là",
+    "headlineLead": "Lập trình viên",
+    "headlineBefore": "Làm từ database",
+    "headlineCircled": "đến giao diện",
+    "headlineNote": "Vì sản phẩm chạy được mới là câu trả lời."
   },
   "about": {
     "eyebrow": "giới thiệu",
@@ -33,9 +38,18 @@
       "Mình quan tâm đến kiến trúc dễ đọc, component tái sử dụng và giao diện mượt, để một tính năng hôm nay dễ ra mắt và ngày mai vẫn dễ chỉnh sửa."
     ],
     "facts": [
-      { "label": "Kinh nghiệm", "value": "2+ năm" },
-      { "label": "Hướng chính", "value": "Web full-stack" },
-      { "label": "Stack chính", "value": "Laravel, Next.js, NestJS" }
+      {
+        "label": "Kinh nghiệm",
+        "value": "2+ năm"
+      },
+      {
+        "label": "Hướng chính",
+        "value": "Web full-stack"
+      },
+      {
+        "label": "Stack chính",
+        "value": "Laravel, Next.js, NestJS"
+      }
     ]
   },
   "skills": {
@@ -55,22 +69,36 @@
       "pickleLearn": {
         "name": "PICKLE-LEARN",
         "summary": "Nền tảng học pickleball tích hợp AI, gồm web, mobile và phân tích video.",
-        "tags": ["Web", "Mobile", "Phân tích video"]
+        "tags": [
+          "Web",
+          "Mobile",
+          "Phân tích video"
+        ]
       },
       "autopilot": {
         "name": "Autopilot",
         "summary": "Hệ thống quản lý ca làm việc với các thành phần giao diện tái sử dụng và lập kế hoạch sản xuất.",
-        "tags": ["Quản lý ca", "Kế hoạch sản xuất", "UI"]
+        "tags": [
+          "Quản lý ca",
+          "Kế hoạch sản xuất",
+          "UI"
+        ]
       },
       "nanoco": {
         "name": "Nanoco",
         "summary": "Hệ thống điều hành sản xuất (MES), phát triển cả giao diện và API.",
-        "tags": ["MES", "Full-stack"]
+        "tags": [
+          "MES",
+          "Full-stack"
+        ]
       },
       "spaPractice": {
         "name": "Spa Practice",
         "summary": "Dự án cá nhân: website luyện tập lập phác đồ chăm sóc da mặt trong spa.",
-        "tags": ["Dự án cá nhân", "Web"]
+        "tags": [
+          "Dự án cá nhân",
+          "Web"
+        ]
       }
     }
   },

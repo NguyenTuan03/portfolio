@@ -21,10 +21,10 @@ export function Contact({ dict }: ContactProps) {
       eyebrow={contact.eyebrow}
       title={contact.title}
     >
-      <div className="reveal glass relative overflow-hidden rounded-3xl p-8 md:p-12">
+      <div className="reveal relative">
         <div
           aria-hidden="true"
-          className="absolute -right-20 -top-20 -z-10 size-64 rounded-full bg-accent opacity-15 blur-3xl"
+          className="absolute -left-24 top-0 -z-10 size-64 rounded-full bg-accent-2 opacity-25 blur-3xl"
         />
         <p className="max-w-xl text-lg leading-relaxed text-muted">
           {contact.text}

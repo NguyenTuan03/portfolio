@@ -6,33 +6,33 @@
 :root,
 [data-theme="dark"] {
   color-scheme: dark;
-  --background: #080b0f;
-  --surface: #0e131a;
-  --surface-hover: #131a23;
-  --border: #1f2933;
-  --foreground: #e6edf3;
-  --muted: #8d9aa8;
-  --accent: #34d399;
-  --accent-foreground: #04110b;
-  --accent-soft: rgb(52 211 153 / 0.12);
-  --accent-2: #8b7cf6;
-  --grid-line: rgb(255 255 255 / 0.035);
-  --blob-opacity: 0.2;
+  --background: #0d0620;
+  --surface: #1a0b3d;
+  --surface-hover: #240f52;
+  --border: #35206b;
+  --foreground: #f3eeff;
+  --muted: #a99bc9;
+  --accent: #a78bfa;
+  --accent-foreground: #140730;
+  --accent-soft: rgb(167 139 250 / 0.14);
+  --accent-2: #7c3aed;
+  --grid-line: rgb(255 255 255 / 0.03);
+  --blob-opacity: 0.28;
 }
 
 [data-theme="light"] {
   color-scheme: light;
-  --background: #f8faf9;
+  --background: #f7f4ff;
   --surface: #ffffff;
-  --surface-hover: #f1f5f3;
-  --border: #dde5e1;
-  --foreground: #0d1620;
-  --muted: #4b5a68;
-  --accent: #047857;
+  --surface-hover: #efe9ff;
+  --border: #ddd2f5;
+  --foreground: #1a0b3d;
+  --muted: #5b4f7a;
+  --accent: #6d28d9;
   --accent-foreground: #ffffff;
-  --accent-soft: rgb(4 120 87 / 0.1);
+  --accent-soft: rgb(109 40 217 / 0.09);
   --accent-2: #4f46e5;
-  --grid-line: rgb(13 22 32 / 0.05);
+  --grid-line: rgb(26 11 61 / 0.05);
   --blob-opacity: 0.16;
 }
 
@@ -109,6 +109,16 @@ body {
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border: 1px solid var(--border);
+}
+
+/* Card tím gradient kiểu thiết kế mẫu */
+.card-purple {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-2) 38%, var(--surface)),
+    var(--surface) 70%
+  );
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 /* Chữ gradient accent -> accent phụ */

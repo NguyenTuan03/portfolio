@@ -23,76 +23,94 @@ export function Hero({ dict }: HeroProps) {
   };
 
   return (
-    <section className="relative isolate overflow-hidden">
-      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10" />
+    <section className="relative isolate">
+      <div className="mx-auto max-w-4xl px-5 pb-20 pt-12 md:pb-28 md:pt-20">
+        <div className="grid items-center gap-8 md:grid-cols-[auto_1fr] md:gap-14">
+          <div className="float relative mx-auto size-44 md:size-56">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-16 -z-10 rounded-full bg-accent-2 opacity-40 blur-3xl"
+            />
+            <Image
+              src={AVATAR_SRC}
+              alt={hero.avatarAlt}
+              width={AVATAR_SIZE}
+              height={AVATAR_SIZE}
+              sizes="(min-width: 768px) 224px, 176px"
+              priority
+              className="size-full rounded-full border-2 border-accent/40 object-cover"
+            />
+          </div>
 
-      <div className="mx-auto grid max-w-5xl items-center gap-12 px-5 pb-24 pt-14 md:grid-cols-[auto_1fr] md:gap-16 md:pb-36 md:pt-24">
-        {/* Avatar tròn: mobile nằm trên, desktop nằm bên trái */}
-        <div className="float relative mx-auto size-44 sm:size-52 md:size-72">
-          <div
-            aria-hidden="true"
-            className="absolute -inset-10 -z-10 rounded-full bg-accent-soft blur-3xl"
-          />
-          <div
-            aria-hidden="true"
-            className="avatar-ring absolute -inset-1.5 rounded-full"
-          />
-          <Image
-            src={AVATAR_SRC}
-            alt={hero.avatarAlt}
-            width={AVATAR_SIZE}
-            height={AVATAR_SIZE}
-            sizes="(min-width: 768px) 288px, 176px"
-            priority
-            className="relative size-full rounded-full border-4 border-background object-cover"
-          />
+          <div className="text-center md:text-left">
+            <p className="text-sm">
+              {hero.greeting}{" "}
+              <span className="text-accent">{SITE.name}</span>
+            </p>
+            <p className="mt-5 text-sm text-muted">{hero.headlineLead}</p>
+            <h1 className="mt-1 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              {hero.headlineBefore}{" "}
+              <span className="relative inline-block px-3 text-accent">
+                {hero.headlineCircled}
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                  className="absolute -inset-x-1 -inset-y-1.5 size-[calc(100%+0.5rem)]"
+                >
+                  <ellipse
+                    cx="50"
+                    cy="50"
+                    rx="48"
+                    ry="42"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </svg>
+              </span>
+            </h1>
+            <p className="mt-3 text-xs text-muted">{hero.headlineNote}</p>
+          </div>
         </div>
 
-        <div className="text-center md:text-left">
-          <p className="font-mono text-sm text-accent">
-            {`> ${hero.greeting}`}
-          </p>
-
-          <h1 className="mt-3 font-semibold tracking-tight">
-            <span className="text-gradient block pb-1 text-5xl leading-tight sm:text-6xl md:text-7xl">
-              {SITE.name}
-            </span>
-          </h1>
-
-          <p className="mt-4 flex items-center justify-center font-mono text-lg md:justify-start md:text-2xl">
+        <h2 className="mt-16 flex flex-wrap items-center justify-center gap-x-3 font-mono text-lg sm:text-2xl md:mt-24 md:justify-start md:text-4xl">
+          <span>{hero.rolePrefix}</span>
+          <span className="flex items-center">
             <span
-              className="typewriter inline-block text-foreground"
+              className="typewriter inline-block"
               style={typewriterStyle}
             >
               {hero.role}
             </span>
             <span
               aria-hidden="true"
-              className="cursor ml-1 inline-block h-6 w-0.5 bg-accent"
+              className="cursor ml-1 inline-block h-[1.1em] w-0.5 bg-accent"
             />
-          </p>
+          </span>
+        </h2>
 
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted md:mx-0">
-            {hero.tagline}
-          </p>
+        <p className="mx-auto mt-6 max-w-xl text-center leading-relaxed text-muted md:mx-0 md:text-left">
+          {hero.tagline}
+        </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
-            <ButtonLink
-              href={`#${SectionId.Projects}`}
-              variant={ButtonVariant.Primary}
-            >
-              {hero.ctaProjects}
-              <ArrowDown aria-hidden="true" weight="bold" className="size-4" />
-            </ButtonLink>
-            <ButtonLink
-              href={SITE.github}
-              variant={ButtonVariant.Secondary}
-              externalLabel={a11y.externalLink}
-            >
-              <GithubLogo aria-hidden="true" weight="bold" className="size-4" />
-              {hero.ctaGithub}
-            </ButtonLink>
-          </div>
+        <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+          <ButtonLink
+            href={`#${SectionId.Projects}`}
+            variant={ButtonVariant.Primary}
+          >
+            {hero.ctaProjects}
+            <ArrowDown aria-hidden="true" weight="bold" className="size-4" />
+          </ButtonLink>
+          <ButtonLink
+            href={SITE.github}
+            variant={ButtonVariant.Secondary}
+            externalLabel={a11y.externalLink}
+          >
+            <GithubLogo aria-hidden="true" weight="bold" className="size-4" />
+            {hero.ctaGithub}
+          </ButtonLink>
         </div>
       </div>
     </section>

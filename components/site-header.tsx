@@ -14,30 +14,25 @@ const MONOGRAM = "NT";
 
 export function SiteHeader({ locale, dict }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 px-5 py-2.5">
+    <header className="sticky top-0 z-40 bg-accent-2/15 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-x-4 px-5 py-3">
         <Link
           href={`/${locale}`}
-          className="flex items-center gap-2.5 font-mono text-sm font-medium"
+          aria-label={SITE.handle}
+          className="grid size-9 place-items-center rounded-lg border border-accent/40 font-mono text-sm font-bold text-accent shadow-[0_0_18px_-4px_var(--accent)]"
         >
-          <span
-            aria-hidden="true"
-            className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-accent to-accent-2 text-xs font-bold text-accent-foreground"
-          >
-            {MONOGRAM}
-          </span>
-          <span className="hidden sm:inline">{SITE.handle}</span>
+          {MONOGRAM}
         </Link>
 
         <nav
           aria-label={dict.a11y.primaryNav}
-          className="glass order-3 mt-2 flex w-full justify-center gap-1 overflow-x-auto rounded-full p-1 md:order-none md:mt-0 md:w-auto"
+          className="order-3 -mx-1 mt-2 flex w-full justify-center gap-1 overflow-x-auto md:order-none md:mx-0 md:mt-0 md:w-auto md:gap-4"
         >
           {SECTION_ORDER.map((id) => (
             <a
               key={id}
               href={`#${id}`}
-              className="rounded-full px-4 py-1.5 text-sm text-muted transition-colors hover:bg-accent-soft hover:text-foreground"
+              className="shrink-0 whitespace-nowrap rounded-full px-4 py-1.5 text-sm text-muted transition-colors hover:text-accent"
             >
               {dict.nav[id]}
             </a>

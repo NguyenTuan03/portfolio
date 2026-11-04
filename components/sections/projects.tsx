@@ -20,11 +20,6 @@ const PROJECT_ICON: Record<ProjectId, Icon> = {
   [ProjectId.SpaPractice]: FlowerLotus,
 };
 
-const FEATURED_PROJECT = ProjectId.PickleLearn;
-
-const toSlug = (name: string): string =>
-  name.toLowerCase().replace(/\s+/g, "-");
-
 export function Projects({ dict }: ProjectsProps) {
   const { projects } = dict;
 
@@ -38,60 +33,33 @@ export function Projects({ dict }: ProjectsProps) {
         {PROJECT_ORDER.map((id) => {
           const project = projects.items[id];
           const ProjectIcon = PROJECT_ICON[id];
-          const isFeatured = id === FEATURED_PROJECT;
 
           return (
             <li
               key={id}
-              className={`reveal glass group relative flex flex-col overflow-hidden rounded-2xl p-6 transition motion-safe:hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_18px_50px_-24px_var(--accent)] md:p-8 ${
-                isFeatured ? "md:col-span-2" : ""
-              }`}
+              className="reveal card-purple group flex gap-5 rounded-2xl p-6 transition motion-safe:hover:-translate-y-1 hover:shadow-[0_18px_50px_-24px_var(--accent)]"
             >
-              <div
-                aria-hidden="true"
-                className="absolute -right-16 -top-16 -z-10 size-48 rounded-full bg-accent-2 opacity-10 blur-3xl transition-opacity group-hover:opacity-25"
-              />
-
-              <div className="flex items-start justify-between gap-4">
-                <span className="grid size-14 place-items-center rounded-2xl bg-accent-soft text-accent">
-                  <ProjectIcon aria-hidden="true" weight="duotone" className="size-7" />
-                </span>
-                {isFeatured ? (
-                  <span className="rounded-full bg-accent px-3 py-1 font-mono text-xs font-medium text-accent-foreground">
-                    {projects.featured}
-                  </span>
-                ) : (
-                  <span className="font-mono text-xs text-muted">
-                    {`~/${toSlug(project.name)}`}
-                  </span>
-                )}
+              <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-accent-soft text-accent shadow-[0_0_30px_-8px_var(--accent)]">
+                <ProjectIcon aria-hidden="true" weight="duotone" className="size-8" />
+              </span>
+              <div className="min-w-0">
+                <h3 className="text-xl font-semibold tracking-tight">
+                  {project.name}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {project.summary}
+                </p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="rounded-md border border-accent/40 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wide text-accent"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <h3
-                className={`mt-6 font-semibold tracking-tight ${
-                  isFeatured ? "text-3xl md:text-4xl" : "text-2xl"
-                }`}
-              >
-                {project.name}
-              </h3>
-              <p
-                className={`mt-3 flex-1 leading-relaxed text-muted ${
-                  isFeatured ? "max-w-2xl text-lg" : ""
-                }`}
-              >
-                {project.summary}
-              </p>
-
-              <ul className="mt-6 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="rounded-full bg-accent-soft px-3 py-1 font-mono text-xs text-accent"
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
             </li>
           );
         })}

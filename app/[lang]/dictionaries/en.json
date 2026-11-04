@@ -18,12 +18,17 @@
   },
   "hero": {
     "command": "whoami",
-    "greeting": "Hi, I'm",
+    "greeting": "Hello! I am",
     "role": "Full-stack Developer",
     "tagline": "Turning ideas into shipped products, from database to UI.",
     "ctaProjects": "View projects",
     "ctaGithub": "GitHub",
-    "avatarAlt": "Portrait of Nguyễn Tuấn"
+    "avatarAlt": "Portrait of Nguyễn Tuấn",
+    "rolePrefix": "I'm a",
+    "headlineLead": "A developer who",
+    "headlineBefore": "Ships from database",
+    "headlineCircled": "to UI",
+    "headlineNote": "Because a working product speaks louder."
   },
   "about": {
     "eyebrow": "about",
@@ -33,9 +38,18 @@
       "I care about readable architecture, reusable components and interfaces that feel fast, so a feature is easy to ship today and easy to change tomorrow."
     ],
     "facts": [
-      { "label": "Experience", "value": "2+ years" },
-      { "label": "Focus", "value": "Full-stack web" },
-      { "label": "Main stack", "value": "Laravel, Next.js, NestJS" }
+      {
+        "label": "Experience",
+        "value": "2+ years"
+      },
+      {
+        "label": "Focus",
+        "value": "Full-stack web"
+      },
+      {
+        "label": "Main stack",
+        "value": "Laravel, Next.js, NestJS"
+      }
     ]
   },
   "skills": {
@@ -55,22 +69,36 @@
       "pickleLearn": {
         "name": "PICKLE-LEARN",
         "summary": "AI-enhanced pickleball learning platform across web, mobile and video analysis.",
-        "tags": ["Web", "Mobile", "Video analysis"]
+        "tags": [
+          "Web",
+          "Mobile",
+          "Video analysis"
+        ]
       },
       "autopilot": {
         "name": "Autopilot",
         "summary": "Shift management system with reusable UI components and production planning.",
-        "tags": ["Shift management", "Production planning", "UI"]
+        "tags": [
+          "Shift management",
+          "Production planning",
+          "UI"
+        ]
       },
       "nanoco": {
         "name": "Nanoco",
         "summary": "Manufacturing execution system with a full-stack UI and API.",
-        "tags": ["MES", "Full-stack"]
+        "tags": [
+          "MES",
+          "Full-stack"
+        ]
       },
       "spaPractice": {
         "name": "Spa Practice",
         "summary": "Personal side project: a website for practicing facial-spa treatment plans.",
-        "tags": ["Side project", "Web"]
+        "tags": [
+          "Side project",
+          "Web"
+        ]
       }
     }
   },

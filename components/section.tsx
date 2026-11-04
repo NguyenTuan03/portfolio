@@ -15,13 +15,13 @@ export function Section({ id, eyebrow, title, children }: SectionProps) {
     <section
       id={id}
       aria-labelledby={titleId}
-      className="mx-auto w-full max-w-5xl px-5 py-20 md:py-28"
+      className="mx-auto w-full max-w-4xl px-5 py-20 md:py-28"
     >
       <div className="reveal">
         <p className="font-mono text-sm text-accent">{`// ${eyebrow}`}</p>
         <h2
           id={titleId}
-          className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl"
+          className="mt-2 text-3xl font-medium tracking-tight md:text-4xl"
         >
           {title}
         </h2>
