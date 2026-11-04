@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Nguyễn Tuấn | Lập trình viên Full-stack",
+    "description": "Portfolio của Nguyễn Tuấn, lập trình viên full-stack làm việc với PHP/Laravel, Next.js, NestJS và Ruby."
+  },
+  "a11y": {
+    "skipToContent": "Bỏ qua, đến nội dung chính",
+    "toggleTheme": "Chuyển giao diện sáng/tối",
+    "switchLanguage": "Đổi ngôn ngữ",
+    "primaryNav": "Điều hướng chính",
+    "externalLink": "mở trong tab mới"
+  },
+  "nav": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "command": "whoami",
+    "greeting": "Xin chào, mình là",
+    "role": "Lập trình viên Full-stack",
+    "tagline": "Biến ý tưởng thành sản phẩm chạy được, từ database đến giao diện.",
+    "ctaProjects": "Xem dự án",
+    "ctaGithub": "GitHub"
+  },
+  "about": {
+    "eyebrow": "giới thiệu",
+    "title": "Về mình",
+    "paragraphs": [
+      "Mình là lập trình viên full-stack với hơn 2 năm kinh nghiệm xây dựng sản phẩm web từ đầu đến cuối. Mình làm việc thoải mái với PHP/Laravel, Next.js, NestJS và Ruby.",
+      "Mình quan tâm đến kiến trúc dễ đọc, component tái sử dụng và giao diện mượt, để một tính năng hôm nay dễ ra mắt và ngày mai vẫn dễ chỉnh sửa."
+    ],
+    "facts": [
+      { "label": "Kinh nghiệm", "value": "2+ năm" },
+      { "label": "Hướng chính", "value": "Web full-stack" },
+      { "label": "Stack chính", "value": "Laravel, Next.js, NestJS" }
+    ]
+  },
+  "skills": {
+    "eyebrow": "kỹ năng",
+    "title": "Công nghệ sử dụng",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "dataCloud": "Dữ liệu & Cloud"
+    }
+  },
+  "projects": {
+    "eyebrow": "dự án",
+    "title": "Dự án tiêu biểu",
+    "items": {
+      "pickleLearn": {
+        "name": "PICKLE-LEARN",
+        "summary": "Nền tảng học pickleball tích hợp AI, gồm web, mobile và phân tích video.",
+        "tags": ["Web", "Mobile", "Phân tích video"]
+      },
+      "autopilot": {
+        "name": "Autopilot",
+        "summary": "Hệ thống quản lý ca làm việc với các thành phần giao diện tái sử dụng và lập kế hoạch sản xuất.",
+        "tags": ["Quản lý ca", "Kế hoạch sản xuất", "UI"]
+      },
+      "nanoco": {
+        "name": "Nanoco",
+        "summary": "Hệ thống điều hành sản xuất (MES), phát triển cả giao diện và API.",
+        "tags": ["MES", "Full-stack"]
+      },
+      "spaPractice": {
+        "name": "Spa Practice",
+        "summary": "Dự án cá nhân: website luyện tập lập phác đồ chăm sóc da mặt trong spa.",
+        "tags": ["Dự án cá nhân", "Web"]
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "liên hệ",
+    "title": "Cùng làm điều gì đó thú vị",
+    "text": "Bạn có dự án hay cơ hội muốn trao đổi? Hãy liên hệ, mình rất sẵn lòng.",
+    "github": "Trang GitHub",
+    "email": "Email"
+  },
+  "footer": {
+    "owner": "Nguyễn Tuấn",
+    "builtWith": "Xây dựng bằng Next.js & Tailwind CSS"
+  }
+}
