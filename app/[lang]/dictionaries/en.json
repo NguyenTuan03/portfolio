@@ -22,7 +22,8 @@
     "role": "Full-stack Developer",
     "tagline": "Turning ideas into shipped products, from database to UI.",
     "ctaProjects": "View projects",
-    "ctaGithub": "GitHub"
+    "ctaGithub": "GitHub",
+    "avatarAlt": "Portrait of Nguyễn Tuấn"
   },
   "about": {
     "eyebrow": "about",

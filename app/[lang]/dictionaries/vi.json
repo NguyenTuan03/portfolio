@@ -22,7 +22,8 @@
     "role": "Lập trình viên Full-stack",
     "tagline": "Biến ý tưởng thành sản phẩm chạy được, từ database đến giao diện.",
     "ctaProjects": "Xem dự án",
-    "ctaGithub": "GitHub"
+    "ctaGithub": "GitHub",
+    "avatarAlt": "Chân dung Nguyễn Tuấn"
   },
   "about": {
     "eyebrow": "giới thiệu",
