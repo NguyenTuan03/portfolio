@@ -50,6 +50,7 @@
   "projects": {
     "eyebrow": "projects",
     "title": "Selected projects",
+    "featured": "Featured",
     "items": {
       "pickleLearn": {
         "name": "PICKLE-LEARN",

@@ -50,6 +50,7 @@
   "projects": {
     "eyebrow": "dự án",
     "title": "Dự án tiêu biểu",
+    "featured": "Nổi bật",
     "items": {
       "pickleLearn": {
         "name": "PICKLE-LEARN",

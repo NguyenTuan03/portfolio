@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { ArrowDown, GithubLogo } from "@phosphor-icons/react/ssr";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -8,42 +9,74 @@ interface HeroProps {
   dict: Dictionary;
 }
 
+interface TypewriterStyle extends CSSProperties {
+  "--chars": number;
+}
+
 const AVATAR_SRC = "/avatar.jpg";
 const AVATAR_SIZE = 800;
 
 export function Hero({ dict }: HeroProps) {
   const { hero, a11y } = dict;
+  const typewriterStyle: TypewriterStyle = {
+    "--chars": hero.role.normalize("NFC").length,
+  };
 
   return (
     <section className="relative isolate overflow-hidden">
       <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10" />
-      <div aria-hidden="true" className="bg-glow absolute inset-0 -z-10" />
 
-      <div className="mx-auto grid max-w-5xl items-center gap-10 px-5 pb-24 pt-16 md:grid-cols-[1fr_auto] md:gap-16 md:pb-36 md:pt-28">
-        <div>
-          <p className="font-mono text-sm text-muted">
-            <span className="text-accent">$</span> {hero.command}
+      <div className="mx-auto grid max-w-5xl items-center gap-12 px-5 pb-24 pt-14 md:grid-cols-[auto_1fr] md:gap-16 md:pb-36 md:pt-24">
+        {/* Avatar tròn: mobile nằm trên, desktop nằm bên trái */}
+        <div className="float relative mx-auto size-44 sm:size-52 md:size-72">
+          <div
+            aria-hidden="true"
+            className="absolute -inset-10 -z-10 rounded-full bg-accent-soft blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="avatar-ring absolute -inset-1.5 rounded-full"
+          />
+          <Image
+            src={AVATAR_SRC}
+            alt={hero.avatarAlt}
+            width={AVATAR_SIZE}
+            height={AVATAR_SIZE}
+            sizes="(min-width: 768px) 288px, 176px"
+            priority
+            className="relative size-full rounded-full border-4 border-background object-cover"
+          />
+        </div>
+
+        <div className="text-center md:text-left">
+          <p className="font-mono text-sm text-accent">
+            {`> ${hero.greeting}`}
+          </p>
+
+          <h1 className="mt-3 font-semibold tracking-tight">
+            <span className="text-gradient block pb-1 text-5xl leading-tight sm:text-6xl md:text-7xl">
+              {SITE.name}
+            </span>
+          </h1>
+
+          <p className="mt-4 flex items-center justify-center font-mono text-lg md:justify-start md:text-2xl">
+            <span
+              className="typewriter inline-block text-foreground"
+              style={typewriterStyle}
+            >
+              {hero.role}
+            </span>
             <span
               aria-hidden="true"
-              className="cursor ml-1 inline-block h-4 w-2 translate-y-0.5 bg-accent"
+              className="cursor ml-1 inline-block h-6 w-0.5 bg-accent"
             />
           </p>
 
-          <h1 className="mt-6 font-semibold tracking-tight">
-            <span className="block text-2xl font-normal text-muted md:text-3xl">
-              {hero.greeting}
-            </span>
-            <span className="mt-1 block text-5xl md:text-7xl">{SITE.name}</span>
-          </h1>
-
-          <p className="mt-5 font-mono text-lg text-accent md:text-xl">
-            {hero.role}
-          </p>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted md:mx-0">
             {hero.tagline}
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
             <ButtonLink
               href={`#${SectionId.Projects}`}
               variant={ButtonVariant.Primary}
@@ -60,23 +93,6 @@ export function Hero({ dict }: HeroProps) {
               {hero.ctaGithub}
             </ButtonLink>
           </div>
-        </div>
-
-        {/* Mobile: avatar nằm trên cùng; desktop: nằm bên phải */}
-        <div className="relative order-first size-32 md:order-last md:size-72">
-          <div
-            aria-hidden="true"
-            className="absolute -inset-3 -z-10 rounded-3xl bg-accent-soft blur-2xl"
-          />
-          <Image
-            src={AVATAR_SRC}
-            alt={hero.avatarAlt}
-            width={AVATAR_SIZE}
-            height={AVATAR_SIZE}
-            sizes="(min-width: 768px) 288px, 128px"
-            priority
-            className="size-full rounded-2xl border border-border object-cover"
-          />
         </div>
       </div>
     </section>

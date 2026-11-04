@@ -18,7 +18,7 @@ export function About({ dict }: AboutProps) {
           ))}
         </div>
 
-        <div className="reveal overflow-hidden rounded-xl border border-border bg-surface md:col-span-2">
+        <div className="reveal glass overflow-hidden rounded-2xl md:col-span-2">
           <div
             aria-hidden="true"
             className="flex gap-1.5 border-b border-border px-4 py-3"

@@ -1,3 +1,4 @@
+import { Background } from "@/components/background";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { About } from "@/components/sections/about";
@@ -20,6 +21,7 @@ export default async function Page() {
       >
         {dict.a11y.skipToContent}
       </a>
+      <Background />
       <SiteHeader locale={locale} dict={dict} />
       <main id={MAIN_ID} className="flex-1">
         <Hero dict={dict} />
