@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Nguyễn Tuấn | Full-stack Developer",
-    "description": "Portfolio of Nguyễn Tuấn, a full-stack developer working with PHP/Laravel, Next.js, NestJS and Ruby."
+    "description": "Portfolio of Nguyễn Tuấn, a full-stack developer specializing in Next.js, Laravel, NestJS and cloud infrastructure."
   },
   "a11y": {
     "skipToContent": "Skip to content",
@@ -14,12 +14,14 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "sayHello": "Say Hello"
   },
   "hero": {
     "command": "whoami",
     "greeting": "Hello! I am",
     "role": "Full-stack Developer",
+    "title": "Full-stack Developer, Software Engineer & Builder",
     "tagline": "Turning ideas into shipped products, from database to UI.",
     "ctaProjects": "View projects",
     "ctaGithub": "GitHub",
@@ -32,7 +34,8 @@
   },
   "about": {
     "eyebrow": "about",
-    "title": "About me",
+    "title": "Hi, I’m Tuấn. Nice to meet you.",
+    "bio": "Since beginning my journey as a full-stack developer, I've built end-to-end web products, architected robust backend APIs, and engineered smooth user interfaces. I'm quietly confident, naturally curious, and constantly working on improving my craft.",
     "paragraphs": [
       "I'm a full-stack developer with 2+ years of experience building web products end to end. I work comfortably across PHP/Laravel, Next.js, NestJS and Ruby.",
       "I care about readable architecture, reusable components and interfaces that feel fast, so a feature is easy to ship today and easy to change tomorrow."
@@ -54,17 +57,57 @@
   },
   "skills": {
     "eyebrow": "skills",
-    "title": "Tech stack",
-    "groups": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "dataCloud": "Data & Cloud"
+    "title": "What I Do",
+    "columns": {
+      "frontend": {
+        "title": "Frontend Developer",
+        "desc": "I like to code clean, accessible, and responsive user interfaces with smooth interactions.",
+        "languagesTitle": "Languages & Frameworks:",
+        "languages": "Next.js, React, TypeScript, Tailwind CSS, Ant Design",
+        "toolsTitle": "Focus & Tools:",
+        "tools": [
+          "Component Architecture",
+          "State Management",
+          "Responsive Layouts",
+          "Web Accessibility (a11y)"
+        ]
+      },
+      "backend": {
+        "title": "Backend Architect",
+        "desc": "I value reliable business logic, clean database design, and maintainable APIs.",
+        "languagesTitle": "Languages & Frameworks:",
+        "languages": "PHP / Laravel, NestJS, Ruby, Go",
+        "toolsTitle": "Focus & Tools:",
+        "tools": [
+          "RESTful APIs",
+          "Relational Database Design",
+          "Authentication & Security",
+          "MVC & Clean Architecture"
+        ]
+      },
+      "dataCloud": {
+        "title": "Data & Cloud",
+        "desc": "I care about seamless deployment, data integrity, and high-performance infrastructure.",
+        "languagesTitle": "Technologies:",
+        "languages": "PostgreSQL, MySQL, AWS, Docker, Git",
+        "toolsTitle": "Focus & Tools:",
+        "tools": [
+          "Database Optimization",
+          "CI/CD Workflows",
+          "Containerization",
+          "Cloud Services"
+        ]
+      }
     }
   },
   "projects": {
     "eyebrow": "projects",
-    "title": "Selected projects",
+    "title": "My Recent Work",
+    "subtitle": "Here are a few projects I've built end-to-end. Want to see more or collaborate?",
     "featured": "Featured",
+    "viewProject": "Visit Project",
+    "seeMoreGithub": "See more on GitHub",
+    "emailMe": "Email me",
     "items": {
       "pickleLearn": {
         "name": "PICKLE-LEARN",
@@ -107,10 +150,20 @@
     "title": "Let's build something together",
     "text": "Have a project or an opportunity in mind? Reach out and let's talk.",
     "github": "GitHub profile",
-    "email": "Email"
+    "email": "Email",
+    "calloutTitle": "Start a project",
+    "calloutText": "Interested in working together? We should queue up a time to chat. I’ll buy the coffee.",
+    "calloutAction": "Let's do this",
+    "copyEmail": "Copy email",
+    "copied": "Copied!",
+    "chatZalo": "Chat on Zalo",
+    "facebook": "Facebook",
+    "zalo": "Zalo"
   },
   "footer": {
     "owner": "Nguyễn Tuấn",
-    "builtWith": "Built with Next.js & Tailwind CSS"
+    "builtWith": "Built with Next.js & Tailwind CSS",
+    "quote": "Living, learning, & leveling up one day at a time.",
+    "handcrafted": "Handcrafted by Nguyễn Tuấn"
   }
 }

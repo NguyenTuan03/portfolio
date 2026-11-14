@@ -1,6 +1,5 @@
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { SectionId } from "@/lib/site";
-import { Section } from "../section";
 
 interface AboutProps {
   dict: Dictionary;
@@ -10,33 +9,18 @@ export function About({ dict }: AboutProps) {
   const { about } = dict;
 
   return (
-    <Section id={SectionId.About} eyebrow={about.eyebrow} title={about.title}>
-      <div className="grid gap-10 md:grid-cols-5">
-        <div className="reveal space-y-5 text-lg leading-relaxed text-muted md:col-span-3">
-          {about.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-
-        <div className="reveal glass overflow-hidden rounded-2xl md:col-span-2">
-          <div
-            aria-hidden="true"
-            className="flex gap-1.5 border-b border-border px-4 py-3"
-          >
-            <span className="size-2.5 rounded-full bg-border" />
-            <span className="size-2.5 rounded-full bg-border" />
-            <span className="size-2.5 rounded-full bg-accent" />
-          </div>
-          <dl className="divide-y divide-border font-mono text-sm">
-            {about.facts.map((fact) => (
-              <div key={fact.label} className="flex flex-col gap-1 px-4 py-3">
-                <dt className="text-muted">{fact.label}</dt>
-                <dd className="text-foreground">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+    <section
+      id={SectionId.About}
+      className="ocean-banner relative w-full pt-20 pb-36 md:pt-28 md:pb-48 text-center transition-colors"
+    >
+      <div className="mx-auto max-w-4xl px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
+          {about.title}
+        </h2>
+        <p className="mx-auto max-w-2xl text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed md:leading-loose">
+          {about.bio}
+        </p>
       </div>
-    </Section>
+    </section>
   );
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Nguyễn Tuấn | Lập trình viên Full-stack",
-    "description": "Portfolio của Nguyễn Tuấn, lập trình viên full-stack làm việc với PHP/Laravel, Next.js, NestJS và Ruby."
+    "description": "Portfolio của Nguyễn Tuấn, lập trình viên full-stack chuyên về Next.js, Laravel, NestJS và hạ tầng cloud."
   },
   "a11y": {
     "skipToContent": "Bỏ qua, đến nội dung chính",
@@ -14,12 +14,14 @@
     "about": "Giới thiệu",
     "skills": "Kỹ năng",
     "projects": "Dự án",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "sayHello": "Gửi lời chào"
   },
   "hero": {
     "command": "whoami",
     "greeting": "Xin chào! Mình là",
     "role": "Lập trình viên Full-stack",
+    "title": "Lập trình viên Full-stack & Kỹ sư phần mềm",
     "tagline": "Biến ý tưởng thành sản phẩm chạy được, từ database đến giao diện.",
     "ctaProjects": "Xem dự án",
     "ctaGithub": "GitHub",
@@ -32,7 +34,8 @@
   },
   "about": {
     "eyebrow": "giới thiệu",
-    "title": "Về mình",
+    "title": "Xin chào, mình là Tuấn. Rất vui được gặp bạn.",
+    "bio": "Từ khi bắt đầu hành trình làm lập trình viên full-stack, mình đã phát triển nhiều sản phẩm web trọn vẹn, thiết kế kiến trúc backend tin cậy và tạo ra các giao diện người dùng mượt mà. Mình luôn tò mò, kiên trì và không ngừng nâng cao tay nghề mỗi ngày.",
     "paragraphs": [
       "Mình là lập trình viên full-stack với hơn 2 năm kinh nghiệm xây dựng sản phẩm web từ đầu đến cuối. Mình làm việc thoải mái với PHP/Laravel, Next.js, NestJS và Ruby.",
       "Mình quan tâm đến kiến trúc dễ đọc, component tái sử dụng và giao diện mượt, để một tính năng hôm nay dễ ra mắt và ngày mai vẫn dễ chỉnh sửa."
@@ -54,17 +57,57 @@
   },
   "skills": {
     "eyebrow": "kỹ năng",
-    "title": "Công nghệ sử dụng",
-    "groups": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "dataCloud": "Dữ liệu & Cloud"
+    "title": "Chuyên môn của mình",
+    "columns": {
+      "frontend": {
+        "title": "Lập trình Frontend",
+        "desc": "Mình thích xây dựng giao diện người dùng sạch sẽ, dễ tiếp cận, mượt mà và tương thích tốt.",
+        "languagesTitle": "Ngôn ngữ & Framework:",
+        "languages": "Next.js, React, TypeScript, Tailwind CSS, Ant Design",
+        "toolsTitle": "Trọng tâm & Kỹ năng:",
+        "tools": [
+          "Kiến trúc Component",
+          "Quản lý State",
+          "Responsive Layouts",
+          "Khả năng tiếp cận (a11y)"
+        ]
+      },
+      "backend": {
+        "title": "Kiến trúc Backend",
+        "desc": "Mình chú trọng logic kinh doanh vững chắc, thiết kế cơ sở dữ liệu tối ưu và API dễ bảo trì.",
+        "languagesTitle": "Ngôn ngữ & Framework:",
+        "languages": "PHP / Laravel, NestJS, Ruby, Go",
+        "toolsTitle": "Trọng tâm & Kỹ năng:",
+        "tools": [
+          "RESTful APIs",
+          "Thiết kế CSDL quan hệ",
+          "Bảo mật & Xác thực",
+          "Kiến trúc MVC & Clean Code"
+        ]
+      },
+      "dataCloud": {
+        "title": "Dữ liệu & Vận hành",
+        "desc": "Mình quan tâm đến quy trình triển khai trơn tru, toàn vẹn dữ liệu và hệ thống ổn định.",
+        "languagesTitle": "Công nghệ chính:",
+        "languages": "PostgreSQL, MySQL, AWS, Docker, Git",
+        "toolsTitle": "Trọng tâm & Kỹ năng:",
+        "tools": [
+          "Tối ưu hóa Database",
+          "Quy trình CI/CD",
+          "Containerization (Docker)",
+          "Dịch vụ Cloud"
+        ]
+      }
     }
   },
   "projects": {
     "eyebrow": "dự án",
     "title": "Dự án tiêu biểu",
+    "subtitle": "Dưới đây là một số dự án mình đã trực tiếp phát triển từ đầu đến cuối.",
     "featured": "Nổi bật",
+    "viewProject": "Xem dự án",
+    "seeMoreGithub": "Xem thêm trên GitHub",
+    "emailMe": "Gửi email cho mình",
     "items": {
       "pickleLearn": {
         "name": "PICKLE-LEARN",
@@ -107,10 +150,20 @@
     "title": "Cùng làm điều gì đó thú vị",
     "text": "Bạn có dự án hay cơ hội muốn trao đổi? Hãy liên hệ, mình rất sẵn lòng.",
     "github": "Trang GitHub",
-    "email": "Email"
+    "email": "Email",
+    "calloutTitle": "Cùng khởi đầu dự án",
+    "calloutText": "Bạn có ý tưởng hoặc dự án cần hợp tác? Hãy kết nối và trò chuyện cùng mình nhé.",
+    "calloutAction": "Bắt đầu ngay",
+    "copyEmail": "Sao chép email",
+    "copied": "Đã chép!",
+    "chatZalo": "Nhắn qua Zalo",
+    "facebook": "Facebook",
+    "zalo": "Zalo"
   },
   "footer": {
     "owner": "Nguyễn Tuấn",
-    "builtWith": "Xây dựng bằng Next.js & Tailwind CSS"
+    "builtWith": "Xây dựng bằng Next.js & Tailwind CSS",
+    "quote": "Học hỏi, sáng tạo và hoàn thiện bản thân mỗi ngày.",
+    "handcrafted": "Thiết kế & phát triển bởi Nguyễn Tuấn"
   }
 }

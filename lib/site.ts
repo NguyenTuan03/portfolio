@@ -1,3 +1,11 @@
+export enum SocialPlatform {
+  GitHub = "github",
+  Facebook = "facebook",
+  Zalo = "zalo",
+  LinkedIn = "linkedin",
+  Email = "email",
+}
+
 export interface SiteConfig {
   name: string;
   handle: string;
@@ -6,6 +14,9 @@ export interface SiteConfig {
   /** Chỉ hiển thị trên trang khi có giá trị. */
   email?: string;
   linkedin?: string;
+  facebook?: string;
+  zalo?: string;
+  phone?: string;
 }
 
 export const SITE: SiteConfig = {
@@ -13,6 +24,10 @@ export const SITE: SiteConfig = {
   handle: "nguyentuan03",
   url: "https://nguyentuan03.com",
   github: "https://github.com/NguyenTuan03",
+  email: "nguyenanhtuan.170164@gmail.com",
+  facebook: "https://www.facebook.com/2011tuan2011",
+  zalo: "https://zalo.me/0905038319",
+  phone: "0905038319",
 };
 
 export enum SectionId {
@@ -42,6 +57,30 @@ export const PROJECT_ORDER: readonly ProjectId[] = [
   ProjectId.Nanoco,
   ProjectId.SpaPractice,
 ];
+
+export interface ProjectLink {
+  href: string;
+  isExternal: boolean;
+}
+
+export const PROJECT_LINKS: Record<ProjectId, ProjectLink> = {
+  [ProjectId.PickleLearn]: {
+    href: "https://github.com/NguyenTuan03/pickle-learn",
+    isExternal: true,
+  },
+  [ProjectId.Autopilot]: {
+    href: "https://github.com/NguyenTuan03/autopilot",
+    isExternal: true,
+  },
+  [ProjectId.Nanoco]: {
+    href: "https://github.com/NguyenTuan03/nanoco-mes",
+    isExternal: true,
+  },
+  [ProjectId.SpaPractice]: {
+    href: "https://github.com/NguyenTuan03/spa-practice",
+    isExternal: true,
+  },
+};
 
 export enum SkillGroupId {
   Frontend = "frontend",
